@@ -30,4 +30,7 @@ def lambda_handler(event, context):
             else:
                 output_record = {
                     'recordId': record['recordId'],
-                    'result
+                    'result': 'ProcessingFailed'
+                }
+            output.append(output_record)
+   return {'records': output}
